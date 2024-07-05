@@ -44,6 +44,7 @@ header button {
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 header nav.mobile {
@@ -72,6 +73,7 @@ header nav.mobile.abrir {
 header nav button {
     align-self:flex-end;
     margin-bottom: 4rem;
+
 }
 
 header .mobile a {
@@ -80,6 +82,10 @@ header .mobile a {
     font-size: 1.125rem;
     line-height: 1.5rem;
 
+}
+
+header .desktop{
+    display: none;
 }
 
 main{
@@ -124,11 +130,26 @@ margin-bottom: 1.5rem;
     line-height: 1.5rem;
 }
 
+.primeira-secao button:hover{
+    cursor:pointer;
+    background-color: var(--dark-blue);
+}
+
 .segunda-secao{
     background-color: var(--dark-blue);
     margin-bottom: 4rem;
     padding: 1.5rem 1.3rem;
   
+
+}
+
+.terceira-secao a{
+    text-decoration: none;
+}
+
+.terceira-secao h2:hover{
+    color: var(--vermillion);
+    cursor: pointer;
 
 }
 
@@ -194,7 +215,29 @@ margin-block: 0.6rem;
     color: var(--gunmetal);
 }
 
-@media( min-width: 1110px) {
+@media( min-width:700px) {
+
+     header > button {
+        display: none;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmetal);
+    }
+
+    header .desktop a:hover{
+        color:var(--vermillion);
+
+    }
+
     main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -225,6 +268,7 @@ margin-block: 0.6rem;
 
     }
 
+    
     .segunda-secao h2{
         font-size: 2.5rem;
 
@@ -234,22 +278,5 @@ margin-block: 0.6rem;
         display:flex;
         grid-column: 1 / 4;
     }
-
-    
-    header > button {
-        display: none;
-    }
-
-    header .desktop {
-        display: flex;
-        gap: 2.5rem;
-    }
-
-    header .desktop a {
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
-        text-decoration: none;
-        color: var(--gunmetal);
-    }
-    
+   
 }
