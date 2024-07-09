@@ -176,6 +176,15 @@ margin-bottom: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
+.segunda-secao a{
+    text-decoration: none;
+}
+
+.segunda-secao h3:hover{
+    color: var(--yellow);
+}
+
+
 .segunda-secao p{
 color:var(--silver);
 font-size: 0.9375rem;
